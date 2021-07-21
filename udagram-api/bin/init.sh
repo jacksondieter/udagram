@@ -1,1 +1,12 @@
 eb init --platform node.js-12 --region us-east-1 udagram-server && eb status
+eb setenv RDS_USERNAME=$RDS_USERNAME
+eb setenv RDS_PASSWORD=$RDS_PASSWORD
+eb setenv RDS_DB_NAME=$RDS_DB_NAME
+eb setenv RDS_PORT=$RDS_PORT
+eb setenv RDS_HOSTNAME=$RDS_HOSTNAME
+eb setenv AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+eb setenv AWS_PROFILE=$AWS_PROFILE
+eb setenv AWS_MEDIA_BUCKET=$AWS_MEDIA_BUCKET
+eb setenv JWT_SECRET=$JWT_SECRET
+eb setenv AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+eb setenv AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
