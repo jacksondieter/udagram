@@ -1,15 +1,23 @@
 # Udagram
+[![CircleCI](https://circleci.com/gh/jacksondieter/udagram.svg?style=svg)](https://circleci.com/gh/jacksondieter/udagram)
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application.
+The udagram application is a simple Full-Stack web application  for posting photos ready for production.
 
 ## Getting Started
 
-1. Clone this repo locally into the location of your choice.
-1. Move the content of the udagram folder at the root of the repository as this will become the main content of the project.
-1. Open a terminal and navigate to the root of the repo
-1. follow the instructions in the installation step
+To get started, clone this repo and run `npm install && npm run install:all` in your terminal at the project root.
 
-The project can run but is missing some information to connect to the database and storage service. These will be setup during the course of the project
+## Development server
+
+Afte config all you environment variable run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `yarn build` to build the project. The build artifacts will be stored in the `www/` directory.
+
+## Running unit tests
+
+Run `npm run test` to execute the unit tests.
 
 ### Dependencies
 
@@ -25,16 +33,6 @@ The project can run but is missing some information to connect to the database a
 - A S3 bucket for hosting uploaded pictures.
 
 ```
-
-### Installation
-
-Provision the necessary AWS services needed for running the application:
-
-1. In AWS, provision a publicly available RDS database running Postgres. <Place holder for link to classroom article>
-1. In AWS, provision a s3 bucket for hosting the uploaded files. <Place holder for tlink to classroom article>
-1. Export the ENV variables needed or use a package like [dotnev](https://www.npmjs.com/package/dotenv)/.
-1. From the root of the repo, navigate udagram-api folder `cd starter/udagram-api` to install the node_modules `npm install`. After installation is done start the api in dev mode with `npm run dev`.
-1. Without closing the terminal in step 1, navigate to the udagram-frontend `cd starter/udagram-frontend` to intall the node_modules `npm install`. After installation is done start the api in dev mode with `npm run start`.
 
 ## Testing
 
@@ -60,6 +58,21 @@ The e2e tests are using Protractor and Jasmine.
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
 
-## License
 
-[License](LICENSE.txt)
+### Infrastructure
+
+This application was deployed using diferent AWS services:
+```
+* The Postgres database is available with AWS RDS.
+* The uploaded files are available in a AWS S3 Bucket.
+* The Frontend server is hosted in a AWS S3 Bucket.
+* The API server is available in AWS Elastic Beanstalk.
+```
+
+### Environment variables needed
+
+```
+RDS_USERNAME, RDS_PASSWORD, RDS_DB_NAME, RDS_PORT, RDS_HOSTNAME, 
+PORT, AWS_DEFAULT_REGION, AWS_PROFILE, AWS_BUCKET, AWS_MEDIA_BUCKET, 
+URL, JWT_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+```
