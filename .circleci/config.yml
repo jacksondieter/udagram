@@ -29,6 +29,14 @@ jobs:
           name: build frontend
           command: |
             npm run build-frontend
+      - run:
+          name: deploy backend
+          command: |
+            npm run deploy-backend
+      - run:
+          name: deploy frontend
+          command: |
+            npm run deploy-frontend
       
 
 # AWS_ACCESS_KEY_ID
