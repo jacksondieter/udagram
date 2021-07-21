@@ -16,19 +16,19 @@ jobs:
       - run:
           name: install backend
           command: |
-            npm run backend-install
+            npm run install-backend
       - run:
           name: install frontend
           command: |
-            npm run frontend-install
+            npm run install-frontend
       - run:
           name: build backend
           command: |
-            npm run backend-build
+            npm run build-backend
       - run:
           name: build frontend
           command: |
-            npm run frontend-build
+            npm run build-frontend
       # - run:
       #     name: Deploy App
       #     command: |
