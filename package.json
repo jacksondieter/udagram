@@ -13,6 +13,7 @@
         "test-frontend": "cd udagram-frontend && npm run test",
         "test": "concurrently \"npm:test-*\"",
         "deploy-frontend": "cd udagram-frontend && npm run deploy",
+        "deploy-init": "cd udagram-api && npm run init",
         "deploy-backend": "cd udagram-api && npm run deploy",
         "deploy": "concurrently \"npm:build-*\""
     },

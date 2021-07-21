@@ -18,8 +18,7 @@ jobs:
       - run:
           name: EB CLI conection
           command: |
-            eb init
-            eb status          
+            npm run deploy-init      
       - run:
           name: install backend
           command: |
