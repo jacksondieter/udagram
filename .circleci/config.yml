@@ -18,6 +18,7 @@ jobs:
       - run:
           name: EB CLI conection
           command: |
+            eb init
             eb status          
       - run:
           name: install backend
