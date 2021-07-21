@@ -22,6 +22,10 @@ jobs:
           command: |
             npm run install-frontend
       - run:
+          name: Test App
+          command: |
+            npm run test-frontend
+      - run:
           name: build backend
           command: |
             npm run build-backend
@@ -29,10 +33,7 @@ jobs:
           name: build frontend
           command: |
             npm run build-frontend
-      # - run:
-      #     name: Deploy App
-      #     command: |
-      #       npm run frontend:deploy
+      
 
 # AWS_ACCESS_KEY_ID
 # AWS_DEFAULT_REGION
