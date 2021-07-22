@@ -52,6 +52,9 @@ Unit tests are using the Jasmine Framework.
 
 The e2e tests are using Protractor and Jasmine.
 
+### Deployment
+- [Deployment documentation](docs/Deployment-doc.md)
+
 ## Built With
 
 - [Angular](https://angular.io/) - Single Page Application Framework
@@ -59,20 +62,5 @@ The e2e tests are using Protractor and Jasmine.
 - [Express](https://expressjs.com/) - Javascript API Framework
 
 
-### Infrastructure
 
-This application was deployed using diferent AWS services:
-```
-* The Postgres database is available with AWS RDS.
-* The uploaded files are available in a AWS S3 Bucket.
-* The Frontend server is hosted in a AWS S3 Bucket.
-* The API server is available in AWS Elastic Beanstalk.
-```
 
-### Environment variables needed
-
-```
-RDS_USERNAME, RDS_PASSWORD, RDS_DB_NAME, RDS_PORT, RDS_HOSTNAME, 
-PORT, AWS_DEFAULT_REGION, AWS_PROFILE, AWS_BUCKET, AWS_MEDIA_BUCKET, 
-URL, JWT_SECRET, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
-```
