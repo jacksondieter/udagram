@@ -12,39 +12,34 @@ jobs:
     steps:
       - node/install
       - aws-cli/setup
-      - checkout
       - eb/setup
+      - checkout      
       # install dependencies in both apps
       - run:
-          name: EB CLI conection
+          name: Set EB environment
           command: |
             npm run deploy-init      
       - run:
-          name: install backend
+          name: Install backend
           command: |
             npm run install-backend
       - run:
-          name: install frontend
+          name: Install frontend
           command: |
             npm run install-frontend
       - run:
-          name: build backend
+          name: Build backend
           command: |
             npm run build-backend
       - run:
-          name: build frontend
+          name: Build frontend
           command: |
             npm run build-frontend
       - run:
-          name: deploy backend
+          name: Deploy backend
           command: |
             npm run deploy-backend
       - run:
-          name: deploy frontend
+          name: Deploy frontend
           command: |
             npm run deploy-frontend
-      
-
-# AWS_ACCESS_KEY_ID
-# AWS_DEFAULT_REGION
-# AWS_SECRET_ACCESS_KEY
